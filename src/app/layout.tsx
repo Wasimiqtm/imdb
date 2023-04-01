@@ -1,30 +1,30 @@
-import Header from './components/Header'
-import './globals.css'
+import Provider from "./Provider";
+import Header from "./components/Header";
+import "./globals.css";
 
 export const metadata = {
-  title: 'IMDB',
-  description: 'IMDB clone',
-}
+  title: "IMDB",
+  description: "IMDB clone",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-        
-        {/* header */}
-        <Header></Header>
-        
-        {/* navbar */}
+        <Provider>
+          {/* header */}
+          <Header></Header>
 
-        
-        {/* search items */}
+          {/* navbar */}
 
-        {children}
-        </body>
+          {/* search items */}
+          {children}
+        </Provider>
+      </body>
     </html>
-  )
+  );
 }
