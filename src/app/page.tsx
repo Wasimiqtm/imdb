@@ -1,6 +1,8 @@
+import Loading from "@/loading";
 import Results from "./components/Results";
 
 async function getMovies(searchParams:any) {
+
   const genre = searchParams.searchParams.genre || "fetchTrending";
   const res = await fetch(`https://api.themoviedb.org/3/${
     genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
@@ -17,7 +19,7 @@ export default async function Home(searchParams:any) {
   const movies = await getMovies(searchParams);
   // console.log(movies); 
   return (
-    <div className=" max-w-6xl mx-auto space-y-4">
+    <div className=" max-w-6xl mx-auto space-y-4 py-4">
       <h1 className=' text-2xl font-medium text-amber-600'>Home</h1>
       <Results movies={movies}></Results>
     </div>
