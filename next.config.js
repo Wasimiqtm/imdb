@@ -9,6 +9,15 @@ const nextConfig = {
   env:{
     SPACE_ID: '7cp1wxlj60a7',
     ACCESS_TOKEN: 'sqb92wC0eyEjXav4yR67a3Hcvw1_I5petoEBxvIUpJY'
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+      },
+    ],
   }
 }
 
