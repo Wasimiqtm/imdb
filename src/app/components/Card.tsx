@@ -7,7 +7,7 @@ export default function Card({ movie }: { movie: any }) {
   return (
     <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group">
       <Link href={`movies/${movie.id}`}>
-        <Image width={500} height={300} src={`https://image.tmdb.org/t/p/original/${
+        <Image unoptimized width={500} height={300} src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`} alt='movie-image' placeholder='blur' blurDataURL='/images/loader.svg'></Image>
           <div className="p-2">

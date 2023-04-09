@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images:{
-    domains:['image.tmdb.org']
+    domains:['image.tmdb.org', 'tmdb.org', 'themoviedb.org']
   },
   env:{
     SPACE_ID: '7cp1wxlj60a7',
